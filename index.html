@@ -63,14 +63,14 @@
         <button class="enter-btn" onclick="startApp()">OPEN WEDDING INVITATION</button>
     </div>
 
- <div id="music-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+ <!--<div id="music-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
     <button onclick="toggleMusic()" id="musicBtn" style="background: var(--maroon); color: var(--gold); border: 2px solid var(--gold); border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
         🎵
     </button>
     <audio id="weddingSong" loop>
         <source src="Vaa Kannamma.mp3" type="audio/mpeg">
     </audio>
-</div>
+</div> -->
     <audio id="bgMusic" loop>
         <source src="Vaa Kannamma.mp3" type="audio/mpeg">
     </audio>
@@ -95,22 +95,22 @@
   <hr style="border: 0; border-top: 1px solid var(--gold); margin: 30px 0;">
      
         <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--maroon);">Wedding Location</h2>
-     Asture Kalyan Mantapa, Lecture Colony, Bhalki, Karnataka 585328 <br><br><div class="section" style="background-color: #f9f4e8;">
+     <div class="section" id="wedding-location" style="background-color: #f9f4e8;">Asture Kalyan Mantapa, Lecture Colony, Bhalki, Karnataka 585328 <br><br>
        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d733.9968222026105!2d77.21951844951668!3d18.042662561642818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcee04a33d3634d%3A0x965bed7a337bae00!2sAsture%20Kalyan%20Mantapa!5e0!3m2!1sen!2sus!4v1773342885580!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
        <hr style="border: 0; border-top: 1px solid var(--gold); margin: 30px 0;">
         <br><br>Your presence is the greatest gift of all. Please let us know if you can make it.
-        <a href="https://wa.me/9004287740?text=Hi! We are attending the Your wedding!" class="btn">RSVP ON WHATSAPP</a>
+        <a href="https://wa.me/9004287740?text=Hii! We are attending Your Wedding!" class="btn" target="_blank" rel="noopener noreferrer">RSVP ON WHATSAPP</a>
   
     </div>
 
-    <div class="upload-section">
+    <div class="upload-section" id="upload-location">
             <h4 style="margin: 0; color: var(--maroon);">Share Your Blessings</h4>
             <p style="font-size: 0.85rem;">Uploaded photos will be added to our wedding album!</p>
-            <a href="https://drive.google.com/drive/folders/1X58ytkAmza1EQ2BRqbOzwpM1vp7TqtVM" style="color: var(--maroon); font-weight: bold; text-decoration: underline;">📸 Upload Photos & Videos</a>
+            <a href="https://drive.google.com/drive/folders/1X58ytkAmza1EQ2BRqbOzwpM1vp7TqtVM" style="color: var(--maroon); font-weight: bold; text-decoration: underline;" target="_blank" rel="noopener noreferrer">📸 Upload Photos & Videos</a>
         </div>
 </div>
     <footer style="padding: 30px; opacity: 0.6; font-size: 0.8rem;">
-        With ❤️ Dubalgunde & Gunjarge Families
+        With 💕 Dubalgunde & Gunjarge Families
     </footer>
  
     <script>
@@ -135,7 +135,7 @@
     }
  
         // Set wedding date: April 28, 2026
-        const weddingDate = new Date("April 28, 2026 12:24:00").getTime();
+        const weddingDate = new Date("March 18, 2026 12:24:00").getTime();
  
         const timer = setInterval(function() {
             const now = new Date().getTime();
@@ -154,6 +154,11 @@
             if (distance < 0) {
                 clearInterval(timer);
                 document.getElementById("countdown-container").innerHTML = "<h3>Happily Married!</h3>";
+                document.getElementById("countdown-container").style.padding = "30px 20px";
+                document.getElementById("wedding-location").innerHTML = "<h3>Thank you for Celebrating with us!</h3>";
+                document.getElementById("wedding-location").style.padding = "30px 20px";
+                document.getElementById("upload-location").innerHTML = "<h3>Your Presence made our Wedding truly Blessed and Memorable!</h3>";              
+                document.getElementById("upload-location").style.padding = "30px 20px";
             }
         }, 1000);
     </script>
